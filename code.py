@@ -17,7 +17,6 @@ data_x=np.reshape(matrix1,[1,-1,5])
 data_y=[main_words.index(i) for i in y_data if i in main_words]
 data_y=np.reshape(data_y,[1,-1])
 
-#jo data provide kar rhe ho , jaise x_data usme iterate karke milan karna hai , iterate karna hai x_data ko index leni hai set words wale data ki
 X_data=tf.placeholder(tf.float32,[None,6,5])
 Y_data=tf.placeholder(tf.int32,[None,6])
 cell=rnn.BasicLSTMCell(num_units=5,state_is_tuple=True)
